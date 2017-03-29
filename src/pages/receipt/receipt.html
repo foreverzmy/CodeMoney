@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CodeMoney</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-avatar item-left>
+      <img src="assets/banner.jpg" alt="">
+    </ion-avatar>
+    <ion-row class="total">
+      <ion-col>
+        <p>￥900.00</p>
+        <p>本月累计收入</p>
+      </ion-col>
+      <ion-col>
+        <p>￥300.00</p>
+        <p>本月累计支出</p>
+      </ion-col>
+      <ion-col>
+        <p>￥600.00</p>
+        <p>本月差额</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-list inset class="cards-list">
+      <button ion-item>
+        <ion-icon name='ios-qr-scanner-outline' item-left></ion-icon>
+        <b>扫码收款</b>&nbsp;&nbsp;￥&nbsp;&nbsp;<font>详情></font>
+
+      </button>
+
+      <button ion-item>
+        <ion-icon name='ios-cash-outline' item-left></ion-icon>
+        <b>现金收款</b>&nbsp;&nbsp;￥&nbsp;&nbsp;<font>详情></font>
+      </button>
+
+      <button ion-item>
+        <ion-icon name='ios-card-outline' item-left></ion-icon>
+        <b>今日支出</b>&nbsp;&nbsp;￥&nbsp;&nbsp;<font>详情></font>
+      </button>
+
+    </ion-list>
+  </ion-card>
+
+  <button ion-button class="receipt" (click)='scan()'>快捷收款</button>
+
+</ion-content>

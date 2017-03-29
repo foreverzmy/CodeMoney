@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list inset>
+
+    <ion-item>
+      <ion-label>手机号</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>验证码</ion-label>
+      <ion-input type="password"></ion-input>
+      <a href="#">短信验证</a>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>登录密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>确认密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf='type==="register"'>
+      <ion-label>区域</ion-label>
+      <ion-select [(ngModel)]="gaming">
+        <ion-option value="nes">北京</ion-option>
+        <ion-option value="n64">上海</ion-option>
+        <ion-option value="ps">广州</ion-option>
+        <ion-option value="genesis">深圳</ion-option>
+      </ion-select>
+      <ion-select [(ngModel)]="gaming">
+        <ion-option value="nes">1</ion-option>
+        <ion-option value="n64">2</ion-option>
+        <ion-option value="ps">3</ion-option>
+        <ion-option value="genesis">4</ion-option>
+        <ion-option value="saturn">5</ion-option>
+        <ion-option value="snes">6</ion-option>
+      </ion-select>
+    </ion-item>
+    <div padding>
+      <button ion-button color="primary" block (click)='regist()'>确定</button>
+      <p *ngIf='type==="register"'>注册表示您同意并愿意遵守<a href="">《xxxx协议》</a></p>
+    </div>
+  </ion-list>
+
+</ion-content>
